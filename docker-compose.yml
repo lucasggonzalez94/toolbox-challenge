@@ -1,0 +1,37 @@
+services:
+  backend:
+    build:
+      context: ./toolbox-be
+      dockerfile: Dockerfile
+    container_name: toolbox-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./toolbox-be:/app
+      - /app/node_modules
+    networks:
+      - toolbox-network
+
+  frontend:
+    build:
+      context: ./toolbox-fe
+      dockerfile: Dockerfile
+    container_name: toolbox-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./toolbox-fe:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    networks:
+      - toolbox-network
+    command: npm run dev -- --host 0.0.0.0
+
+networks:
+  toolbox-network:
+    driver: bridge
