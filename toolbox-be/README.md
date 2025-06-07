@@ -74,18 +74,3 @@ Obtiene la lista de archivos disponibles.
   "files": ["file1.csv", "file2.csv"]
 }
 ```
-
-## Docker
-
-Para ejecutar la API en un contenedor Docker:
-
-```bash
-docker build -t api-files .
-docker run -p 3000:3000 api-files
-```
-
-O usando Docker Compose:
-
-```bash
-docker-compose up
-```
