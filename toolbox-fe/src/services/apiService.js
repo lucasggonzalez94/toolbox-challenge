@@ -20,7 +20,6 @@ class ApiService {
       
       return await response.json();
     } catch (error) {
-      console.error('Error al obtener los datos de los archivos:', error);
       throw error;
     }
   }
@@ -41,7 +40,6 @@ class ApiService {
       const data = await response.json();
       return data.files || [];
     } catch (error) {
-      console.error('Error al obtener la lista de archivos:', error);
       throw error;
     }
   }
