@@ -9,14 +9,7 @@ Este proyecto es una aplicación frontend desarrollada con React que consume la 
 
 ## Instalación
 
-1. Clonar el repositorio
-
-```bash
-git clone https://github.com/tu-usuario/toolbox-fe.git
-cd toolbox-fe
-```
-
-2. Instalar dependencias
+Instalar dependencias
 
 ```bash
 npm install
@@ -24,7 +17,7 @@ npm install
 
 ## Ejecución
 
-Para ejecutar la aplicación en modo desarrollo:
+Ejecutar la aplicación en modo desarrollo:
 
 ```bash
 npm run dev
